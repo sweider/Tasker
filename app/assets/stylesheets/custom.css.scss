@@ -1,0 +1,37 @@
+#home_new-message .well{
+  padding-top: 3px;
+  padding-left: 0.5em;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+#home_new-message form{
+  margin-bottom: 3px;
+}
+
+
+#home_new-message {
+  textarea{
+    margin-bottom: 5px;
+    resize: none;
+    width:96%;
+    margin-left:auto;
+  }
+}
+#home_new-message .inactive{
+  p, .btn{
+    display: none;
+  }
+  textarea{
+    height: 1.5em;
+    margin-bottom:1px;
+    margin-top:1px;
+    margin-left:2px;
+    margin-right:2px;
+  }
+}
+
+
+p{
+  margin-bottom: 1px;
+}

@@ -1,0 +1,12 @@
+<div  id="home_new-message" >
+  <div class="well inactive">
+    <%= form_for ([current_user, current_user.messages.build()]), remote: true  do |f| %>    
+      <div>
+        <p class="text-info"><%= f.label :text, "New message" %></p>
+        <%= f.text_area :text, placeholder: "Enter your message here..." %>
+      </div>
+      <%= f.hidden_field :user_id %>
+      <%= f.submit "Send", class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
