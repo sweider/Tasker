@@ -1,0 +1,9 @@
+<div class="media">
+  <a class="pull-left" href="#">
+    <%= image_tag('user.jpg', size: "48x48") %>
+  </a>
+  <div class="media-body">
+    <p><%= message.text %></p>
+	  <%=link_to create_nickname_string(message.user.nick_name), message.user, class:"text-info small" %>
+  </div>
+</div>

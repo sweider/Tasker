@@ -1,0 +1,14 @@
+<h3> Edit your information</h3>
+
+<%= form_for @user  do |f| %>
+  <div>
+    <%= f.label :nick_name %>
+    <div class="input-prepend">
+      <span class="add-on">@</span>
+      <%= f.text_field :nick_name %>
+    </div>
+  </div>  
+  <div>
+    <%= f.submit "Update", class:"btn btn-primary" %>
+  </div>
+<% end %>

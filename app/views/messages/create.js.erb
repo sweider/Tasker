@@ -1,0 +1,10 @@
+var new_message_form = $("#home_new-message").find(".well");
+
+new_message_form.find("textarea").val("");
+new_message_form.toggleClass("inactive");
+
+var messages_list = $("#home_messages-list");
+
+var message = "<%=  escape_javascript(render @message) %>"
+
+messages_list.prepend(message); 
