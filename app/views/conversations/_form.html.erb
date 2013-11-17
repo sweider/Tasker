@@ -1,0 +1,20 @@
+<%= form_for @conversation  do |f| %>
+  <div>
+    <%= f.label :theme %>
+    <%= f.text_field :theme, placeholder: 'Enter theme here...' %>
+  </div>
+  
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, placeholder: 'Enter description of your conversation...' %>
+  </div>
+  
+  <div>
+    <%= f.label :invitations, 'Add members' %>
+    <%= f.text_field :invitations %>
+  </div>
+
+  <div>
+    <%= f.submit 'Create!' %>
+  </div>
+<% end %>

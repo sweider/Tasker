@@ -3,7 +3,11 @@ class MessagesController < ApplicationController
     @message = Message.create(message_params)
     respond_to do |format|
       format.js
+      format.html { redirect_to current_user}
     end
+  end
+
+  def new
   end
 
   private

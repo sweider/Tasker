@@ -1,0 +1,5 @@
+<%= form_for [current_user, Message.new] do |f| %>
+  <%= f.hidden_field :conversation_id, value: conversation_id %>
+  <div><%= f.text_field :text, placeholder: 'Enter your message here...' %></div>
+  <div><%= f.submit 'Send' %></div>
+<% end %>

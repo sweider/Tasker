@@ -1,2 +1,17 @@
 <h3>@<%= @user.nick_name %> profile</h3>
 <p class="muted"> This section is under work</p>
+<br />
+
+<div>
+  <div>
+    <!-- message part -->
+   <!--  <%= render 'messages/form', conversation_id: nil  %> -->
+  </div>
+
+  <div>
+  </div>
+  
+  <div id="user_message-list">
+    <%= render @messages %>
+  </div>
+</div>
