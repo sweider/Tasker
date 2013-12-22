@@ -15,8 +15,8 @@
   </div>
 
   <div> 
-    <%= f.label :notify_in_days_before_deadline %>
-    <%= f.number_field :notify_in_days_before_deadline, min: 1 %>
+    <%= f.label :notify_date, "Notify start date" %>
+    <%= f.date_select :notify_date, start_year: Time.now.year, default: 2.weeks.from_now, with_css_classes:true %>
   </div>
   <div>
     <%= f.submit "Create task", class:"btn btn-primary"  %>
