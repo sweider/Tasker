@@ -5,8 +5,8 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 group :development do 
-#  gem 'sqlite3'
-  gem 'pg'
+  gem 'sqlite3'
+ # gem 'pg'
 end
 
 group :production do
@@ -25,7 +25,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
+# Use jquery as the Ja†vaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
