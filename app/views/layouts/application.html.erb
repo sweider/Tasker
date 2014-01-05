@@ -36,9 +36,10 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+  <body>
+    <div class="main">
+      <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -54,38 +55,18 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+
+
+      </div> <!-- /container -->
+      
     </div>
-
-    <div class="container" style="margin-top:50px;">
-        <div class="row">
-          <div class="span9">
-           <!--  <div class="span3" style="margin-left:-20px;">
-              <div class="well">
-                <h3 class="muted">Future task pannel</h3>
-              </div>
-            </div> --><!-- 
-            <div class="span6"> -->
-              <%= bootstrap_flash %>
-              <%= yield %>
-           <!--  </div> -->
-          </div>
-          <div class="span3">
-            <div class="well sidebar-nav">
-              <h3>Navigation</h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Places</li>
-                <li><%= link_to "Main stream", root_path  %></li>
-                <li class="pull-left"><%= link_to "Your profile", current_user  %>&nbsp;</li>
-                <li><%= link_to "Edit", edit_user_path(current_user), class:"muted small" %></li>
-              </ul>
-            </div><!--/.well -->
-          </div><!--/span-->
-        </div><!--/row-->
-
-      <footer>
-      </footer>
-
-    </div> <!-- /container -->
-
+        <footer>
+        </footer>
   </body>
 </html>
