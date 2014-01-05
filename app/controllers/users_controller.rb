@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @messages = Message.where("user_id = ?", user_id = params[:id])
+    @tasks = @user.tasks
   end
 
   def edit
