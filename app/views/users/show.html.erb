@@ -1,43 +1,40 @@
+<div class="span2 left"></div>
+        <div class="span8 center-wrap">
+          <div class="tabbable"> <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab1" data-toggle="tab">Tasks</a></li>
+              <li><a href="#tab2" data-toggle="tab">Conversation</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab1">
+                <div class="block">
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Task</button>
+                </div>
 
-<div class="span3"></div>
-<div class="span6">
-  <div class="tabbable"> <!-- Only required for left/right tabs -->
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#tab1" data-toggle="tab">Tasks</a></li>
-      <li><a href="#tab2" data-toggle="tab">Conversation</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane active" id="tab1">
-        <div class="block">
-        <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
- 
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
-</div>
+                <% if !@tasks.empty? %>
+                  <%= render @tasks %>
+                <% else %>
+                  <p>No tasks!</p>
+                <% end %>
+                           
+              </div>
+
+              <div class="tab-pane" id="tab2">
+                <p>Howdy, I'm in Section 2.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <% if !@tasks.empty? %>
-          <%= render @tasks %>
-        <% else %>
-          <p>No tasks!</p>
-        <% end %>
 
-      </div>
-      <div class="tab-pane" id="tab2">
-        <p>Howdy, I'm in Section 2.</p>
-      </div>
+
+
+ <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Modal header</h3>
     </div>
-  </div>
+    <div class="modal-body">
+      <%= render 'tasks/form', task: current_user.tasks.new %>
+     
+    </div>
 </div>
-<div class="span3"></div>
