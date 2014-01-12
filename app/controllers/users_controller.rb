@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @users = User.all
   end  
@@ -6,6 +7,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tasks = @user.tasks
+    @conversations = @user.active_conversations
   end
 
   def edit
@@ -26,4 +28,5 @@ class UsersController < ApplicationController
       params.require(:user).permit(:nick_name)
     end
 
+    
 end

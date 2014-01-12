@@ -16,4 +16,4 @@
 /tmp
 
 #Ignore db config file
-/config/database.yml
+/config/*.yml

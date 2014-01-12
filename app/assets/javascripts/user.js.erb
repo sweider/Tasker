@@ -1,0 +1,21 @@
+$(document).ready(function(){
+  var modal_window = $("#myModal"); 
+
+  $(".tab-content").on("click", ".modal-toggle", function(){    
+    if($(this).attr("id")=="task-modal-toggle")
+    {
+      AddForm("task");
+    }
+    else
+    {
+      AddForm("conversation");
+    }
+  });
+
+  function AddForm(model_name)
+  {
+    modal_window.find("#myModalLabel").text("New " + model_name);
+    modal_window.find("#create-btn").text("Create " + model_name);
+    modal_window.find(".modal-body").html($("#" + model_name + "-form").html());
+  }
+});
