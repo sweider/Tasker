@@ -10,6 +10,6 @@ class TasksController < ApplicationController
 
   private
     def task_params
-      params.require(:task).permit(:caption, :desciption, :deadline, :notify_in_days_before_deadline)
+      params.require(:task).permit(:caption, :description, :deadline, :notify_in_days_before_deadline)
     end
 end

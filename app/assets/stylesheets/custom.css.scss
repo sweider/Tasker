@@ -1,6 +1,6 @@
 $font-stack:    Helvetica, sans-serif;
 $red: rgb(252, 0, 0);
-$backgrey: rgb(223, 223, 223);
+$backgrey: rgb(203, 203, 203);
 $dgrey: rgb(63,63,63);
 $green: #7dc36b;
 $lgreen: #86d173;
@@ -8,7 +8,8 @@ $fontgrey: rgb(35, 35,35);
 $hovergrey: rgb(183,183,183);
 $hovercolor: rgb(233, 233, 233);
 $activeblue: rgb(23, 135, 209);
-$whitegrey: rgb(242, 242, 242);
+$whitegrey: rgb(223, 223, 223);
+$gradient: rgb(213, 213, 213);
 $back: rgb(152,152,152);
 $white: #fff;
 $black: #000;
@@ -45,7 +46,7 @@ header {
 
   }
   .center-wrap {
-    background: #F2F2F2;
+    background: $whitegrey;
     border-radius: 0px;
 
     .nav-tabs {
@@ -53,32 +54,52 @@ header {
         width: 50%;
         text-align: center;
         border-radius: 0;
+        border: none;
+        margin: 0;
+        padding: 0;
       }
       li a{
         color: $activeblue;
         font-size: 20px;
         border-radius: 0;
+        border: none;
         background: $backgrey;
+        margin: 0;
+        font-weight: 300;
 
       }
       
 
       li.active a {
-        background: rgb(242,242,242);
+        background: $whitegrey;
         color: $activeblue;
-        
       }
       li a:hover {
         background: $hovergrey;
-        color: $activeblue;
-        border-bottom: transparent; 
       }
       li.active a:hover {
-        border-bottom-color: transparent;
-        opacity: 0.9;
+         background: $whitegrey;
       }
       li.active:hover {
-        border-bottom-color: transparent;
+      }
+    }
+
+
+    .notasks {
+      display: table;
+      text-align: center;
+      width: 100%;
+      height: 90px;
+
+
+      p {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        font-style: italic;
+  
       }
     }
     
@@ -87,19 +108,63 @@ header {
     .block {
       height: 90px;
       padding: 0 10px;
+      position: relative;
       border-radius: 2px;
-      background: #ededed; /* Old browsers */
-      background: -moz-linear-gradient(top, #ededed 0%, #c9c9c9 100%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#c9c9c9)); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #ededed 0%,#c9c9c9 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #ededed 0%,#c9c9c9 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #ededed 0%,#c9c9c9 100%); /* IE10+ */
-      background: linear-gradient(to bottom, #ededed 0%,#c9c9c9 100%); /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+      background: $whitegrey; /* Old browsers */
+      background: -moz-linear-gradient(top, $whitegrey 0%, $gradient 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$whitegrey), color-stop(100%,$gradient)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, $whitegrey 0%,$gradient 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, $whitegrey 0%,$gradient 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, $whitegrey 0%,$gradient 100%); /* IE10+ */
+      background: linear-gradient(to bottom, $whitegrey 0%,$gradient 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$whitegrey', endColorstr='#$gradient',GradientType=0 ); /* IE6-9 */
 
+      .btn-primary {
+        width: 100%;
+        height: 70px;
+        padding: 0;
+        margin-top: 10px;
+        background: transparent;
+        color: $activeblue;
+        font-weight: 300;
+      }
+      .btn-primary:hover {
+        background: $hovergrey;
+      }
 
       h3 {
         margin: 0;
+      }
+      .deadlines {
+        position: absolute;
+        top: 0;
+        right: 160px;
+        background: $dgrey;
+        color: $hovergrey;
+        border: 1px solid $hovergrey;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        height: 20px;
+        font-size: 10px;
+        padding: 0 10px;
+        p {
+          display: inline-block;
+          span {
+            color: white;
+          }
+
+        }
+      }
+      .actions {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background: $activeblue;
+        padding: 5px;
+        border-radius: 5px 0 0 5px;
+        a {
+          display: block;
+        }
       }
 
     }

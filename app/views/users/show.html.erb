@@ -8,13 +8,15 @@
             <div class="tab-content">
               <div class="tab-pane active" id="tab1">
                 <div class="block">
-                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Task</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary"><i class=" icon-plus"></i> Add Task</button>
                 </div>
 
                 <% if !@tasks.empty? %>
                   <%= render @tasks %>
                 <% else %>
-                  <p>No tasks!</p>
+                  <div class="notasks">
+                    <p>You don't have any task yet. Too create one clich the button above ("add task").</p>
+                  </div>
                 <% end %>
                            
               </div>

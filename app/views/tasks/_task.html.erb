@@ -2,4 +2,13 @@
   <h3><%= task.caption %></h3>
   <span class="not-date"></span>
   <p><%= task.description %></p>
+  <div class="actions">
+  	<a href=""><i class="icon-pencil icon-white"></i></a>
+	<a href=""><i class="icon-trash icon-white"></i></a>
+	<a href=""><i class="icon-ban-circle icon-white"></i></a>
+  </div>
+  <div class="deadlines">
+	<p>Redline: <span>24 10 2014<!--  <%= task.deadline %>  --></span></p>
+	<p>Deadline: <span>17 01 2015<!--  <%= task.notify %> --> </span></p>
+  </div>
 </div>
