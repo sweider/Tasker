@@ -1,14 +1,14 @@
-<div class="block">
+<div class="block task-block">
   <h3><%= task.caption %></h3>
   <span class="not-date"></span>
   <p><%= task.description %></p>
   <div class="actions">
-  	<a href=""><i class="icon-pencil icon-white"></i></a>
-	<a href=""><i class="icon-trash icon-white"></i></a>
-	<a href=""><i class="icon-ban-circle icon-white"></i></a>
+  	<a href=""><i class="icon-pencil"></i></a>
+	  <a href=""><i class="icon-trash"></i></a>
+	  <a href=""><i class="icon-ban-circle"></i></a>
   </div>
   <div class="deadlines">
-	<p>Redline: <span>24 10 2014<!--  <%= task.deadline %>  --></span></p>
-	<p>Deadline: <span>17 01 2015<!--  <%= task.notify %> --> </span></p>
+	<p>Redline: <span><%= task.notify_date %></span></p>
+	<p>Deadline: <span><%= task.deadline %> </span></p>
   </div>
 </div>

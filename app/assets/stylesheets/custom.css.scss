@@ -41,7 +41,7 @@ header {
   min-height: 100%;
     /* equal to footer height */
     margin-bottom: -60px;
-  background: url(back2.png);
+  background: url(bg2.jpg);
   .left {
 
   }
@@ -75,7 +75,7 @@ header {
         color: $activeblue;
       }
       li a:hover {
-        background: $hovergrey;
+        background: $white;//$hovergrey;
       }
       li.active a:hover {
          background: $whitegrey;
@@ -135,7 +135,8 @@ header {
       h3 {
         margin: 0;
       }
-      .deadlines {
+      .deadlines, .members {
+        display: none;
         position: absolute;
         top: 0;
         right: 160px;
@@ -156,6 +157,7 @@ header {
         }
       }
       .actions {
+        display: none;
         position: absolute;
         top: 10px;
         right: 0;
@@ -164,9 +166,35 @@ header {
         border-radius: 5px 0 0 5px;
         a {
           display: block;
+          i {
+            color: $hovergrey;
+          }
+          i:hover {
+            color: $white;
+            text-decoration: none;
+          }
         }
       }
 
+    }
+    .block:hover {
+      .deadlines {
+        display: block;
+      }
+      .actions {
+        display: block;
+      }
+
+    }
+    .task-block, .conversation-block {
+      background: $white; /* Old browsers */
+      background: -moz-linear-gradient(top, $white 0%, $whitegrey 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$white), color-stop(100%,$whitegrey)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, $white 0%,$whitegrey 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, $white 0%,$whitegrey 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, $white 0%,$whitegrey 100%); /* IE10+ */
+      background: linear-gradient(to bottom, $white 0%,$whitegrey 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='#$whitegrey',GradientType=0 ); /* IE6-9 */
     }
   }
 

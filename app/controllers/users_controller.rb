@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tasks = @user.tasks
+    @conversations = @user.started_conversations + @user.active_conversations
   end
 
   def edit
