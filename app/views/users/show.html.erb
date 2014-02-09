@@ -25,7 +25,7 @@
                   <a href="#ConversationModal" role="button" class="btn btn-primary" data-toggle="modal"><i class=" icon-plus"></i> Add Conversation</a>
                 </div>
                 <% if !@conversations.empty? %>
-                  <%= render 'conversations/form', conversation: current_user.started_conversations.new %>
+                  <%= render @conversations %>
                 <% else %>
                   <div class="notasks">
                     <p>You don't have any conversation yet. Too create one click the button above ("add conversation").</p>
@@ -46,7 +46,7 @@
  <div id="TaskModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="TaskModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel">Modal header</h3>
+      <h3 id="myModalLabel">Creating new task</h3>
     </div>
     <div class="modal-body">
       <%= render 'tasks/form', task: current_user.tasks.new %>
@@ -56,12 +56,9 @@
 <div id="ConversationModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="ConversationModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel">Modal header</h3>
+      <h3 id="myModalLabel">Creating new conversation</h3>
     </div>
     <div class="modal-body">
-      <%= render 'conversations/form' %>
-
-      
-     
+      <%= render 'conversations/form', conversation: current_user.started_conversations.new %>
     </div>
 </div>
